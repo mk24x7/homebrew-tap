@@ -2,7 +2,7 @@ class Prune < Formula
   desc "Native macOS app that finds and removes regenerable developer artifacts"
   homepage "https://github.com/mk24x7/prune"
   url "https://github.com/mk24x7/prune/archive/refs/tags/v4.0.0.tar.gz"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "a89057d295c67e25bedccd91f1783272d17ad83ff5a217d762b34af64b2b7436"
   license "MIT"
   head "https://github.com/mk24x7/prune.git", branch: "main"
 

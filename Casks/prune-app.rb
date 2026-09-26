@@ -1,6 +1,6 @@
 cask "prune-app" do
   version "4.0.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "2f08630ac48875ae4c1e4580024d03097c2e4d1df224ad10a0b74fb7e52b41b4"
 
   url "https://github.com/mk24x7/prune/releases/download/v#{version}/Prune-#{version}-macos-universal.dmg"
   name "Prune"
