@@ -2,7 +2,7 @@ class Stale < Formula
   desc "Find uncommitted and unpushed git work that exists nowhere else"
   homepage "https://github.com/mk24x7/stale"
   url "https://github.com/mk24x7/stale/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "ec63cd92d55e24e488f8e5a1691d7a39a4367b3725bc4b55243abae72fc350d8"
   license "MIT"
   head "https://github.com/mk24x7/stale.git", branch: "main"
 

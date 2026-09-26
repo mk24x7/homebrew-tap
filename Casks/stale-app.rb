@@ -1,6 +1,6 @@
 cask "stale-app" do
   version "1.0.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "10faadd4acf5f395200285f4d7eb0e35acf0cc973d3ec122907a3a18c16c1de2"
 
   url "https://github.com/mk24x7/stale/releases/download/v#{version}/Stale-#{version}-macos-universal.dmg"
   name "Stale"
