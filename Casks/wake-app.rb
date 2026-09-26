@@ -1,6 +1,6 @@
 cask "wake-app" do
   version "1.0.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "485cfe8784b88f105b03e02b1866fbd8bb7fd66972975d721895ce95dd39226f"
 
   url "https://github.com/mk24x7/wake/releases/download/v#{version}/Wake-#{version}-macos-universal.dmg"
   name "Wake"

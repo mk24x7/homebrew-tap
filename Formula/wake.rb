@@ -2,7 +2,7 @@ class Wake < Formula
   desc "Explain wake reasons, sleep blockers and battery drain in plain English"
   homepage "https://github.com/mk24x7/wake"
   url "https://github.com/mk24x7/wake/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "5a3eb2921c9ad203bc53eba9df3e38578e3136f6680df20e9f261d3fcb86c894"
   license "MIT"
   head "https://github.com/mk24x7/wake.git", branch: "main"
 
