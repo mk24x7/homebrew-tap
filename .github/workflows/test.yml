@@ -25,21 +25,22 @@ jobs:
           brew tap
 
       - name: brew style
-        run: brew style Formula/prune.rb Formula/prune-cli.rb Casks/prune-app.rb
+        run: brew style Formula/prune.rb Formula/prune-cli.rb Formula/stale.rb Casks/prune-app.rb Casks/stale-app.rb
 
       - name: brew audit (offline)
         run: |
-          brew audit --strict --formula mk24x7/tap/prune mk24x7/tap/prune-cli
-          brew audit --strict --cask mk24x7/tap/prune-app
+          brew audit --strict --formula mk24x7/tap/prune mk24x7/tap/prune-cli mk24x7/tap/stale
+          brew audit --strict --cask mk24x7/tap/prune-app mk24x7/tap/stale-app
 
       - name: brew audit --online
-        # The formulae and cask carry placeholder sha256 values until the first
-        # prune release (v4.0.0) exists, so the online audit cannot pass yet.
-        # Remove continue-on-error after scripts/bump.sh has run for v4.0.0.
+        # The formulae and casks carry placeholder sha256 values until the first
+        # releases (prune v4.0.0, stale v1.0.0) exist, so the online audit cannot
+        # pass yet. Remove continue-on-error after scripts/bump.sh and
+        # scripts/bump-stale.sh have run for those versions.
         continue-on-error: true
         run: |
-          brew audit --strict --online --formula mk24x7/tap/prune mk24x7/tap/prune-cli
-          brew audit --strict --online --cask mk24x7/tap/prune-app
+          brew audit --strict --online --formula mk24x7/tap/prune mk24x7/tap/prune-cli mk24x7/tap/stale
+          brew audit --strict --online --cask mk24x7/tap/prune-app mk24x7/tap/stale-app
 
       - name: shellcheck
         run: |

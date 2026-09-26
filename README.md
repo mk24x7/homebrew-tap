@@ -50,6 +50,34 @@ npx prune-cli --all --dry-run
 A Homebrew formula for the CLI is also available:
 `brew install mk24x7/tap/prune-cli` (depends on Node.js).
 
+## Stale
+
+[Stale](https://github.com/mk24x7/stale) finds the git work on your Mac that
+exists nowhere else: uncommitted changes, untracked files, unpushed commits,
+branches with no upstream, stashes and repositories with no remote. It is
+read-only.
+
+### 1. Build from source (recommended)
+
+```sh
+brew install mk24x7/tap/stale
+```
+
+Installs the `stale` command and compiles Stale.app on your Mac with Xcode, so
+the app opens with no Gatekeeper prompt. `brew info mk24x7/tap/stale` prints
+the command to link or copy the app into /Applications.
+
+### 2. Prebuilt app via cask
+
+```sh
+brew install --cask mk24x7/tap/stale-app
+xattr -d com.apple.quarantine /Applications/Stale.app
+```
+
+The same Gatekeeper note as Prune applies. The prebuilt CLI is also attached
+to each [release](https://github.com/mk24x7/stale/releases/latest) as
+`stale-X.Y.Z-macos-universal.tar.gz`.
+
 ## Tap trust
 
 Homebrew 6 and later only load formulae and casks from non-official taps that
@@ -76,8 +104,10 @@ The build-from-source formula (option 1) avoids this entirely.
 Releases of mk24x7/prune update this tap automatically: the prune release
 workflow runs `scripts/bump.sh VERSION`, which downloads the new source
 tarball and DMG, updates the sha256 values and pushes a `prune VERSION`
-commit. To bump by hand:
+commit. Releases of mk24x7/stale do the same with `scripts/bump-stale.sh`.
+To bump by hand:
 
 ```sh
 scripts/bump.sh 4.1.0
+scripts/bump-stale.sh 1.1.0
 ```
