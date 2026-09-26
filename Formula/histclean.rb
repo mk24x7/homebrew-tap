@@ -2,7 +2,7 @@ class Histclean < Formula
   desc "Find secrets in shell and REPL history files and redact them in place"
   homepage "https://github.com/mk24x7/histclean"
   url "https://github.com/mk24x7/histclean/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "88fb959e5ba760d212245e11ecafb802b91b2e5af0df98634155953cff8366b2"
   license "MIT"
   head "https://github.com/mk24x7/histclean.git", branch: "main"
 

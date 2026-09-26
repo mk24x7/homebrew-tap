@@ -1,6 +1,6 @@
 cask "histclean-app" do
   version "1.0.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "116abadb98dc47f8fcdea50822dd2c9ec156d5c2ea8c54156e790f14d209da56"
 
   url "https://github.com/mk24x7/histclean/releases/download/v#{version}/Histclean-#{version}-macos-universal.dmg"
   name "Histclean"
