@@ -20,6 +20,8 @@ jobs:
           mkdir -p "$taps"
           rm -rf "$taps/homebrew-tap"
           ln -s "$GITHUB_WORKSPACE" "$taps/homebrew-tap"
+          # Homebrew 6+ ignores non-official taps until trusted; trust our own tap.
+          brew trust mk24x7/tap
           brew tap
 
       - name: brew style

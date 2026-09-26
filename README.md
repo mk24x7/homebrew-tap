@@ -50,6 +50,14 @@ npx prune-cli --all --dry-run
 A Homebrew formula for the CLI is also available:
 `brew install mk24x7/tap/prune-cli` (depends on Node.js).
 
+## Tap trust
+
+Homebrew 6 and later only load formulae and casks from non-official taps that
+you trust. Installing by the fully qualified name (`mk24x7/tap/prune`, as in
+the commands above) trusts just that formula or cask. To use short names,
+run `brew trust --formula mk24x7/tap/prune` (or `brew trust mk24x7/tap` for
+the whole tap) first. See <https://docs.brew.sh/Tap-Trust>.
+
 ## Gatekeeper note
 
 Prune is ad-hoc signed and not notarized by Apple. Anything you download with
