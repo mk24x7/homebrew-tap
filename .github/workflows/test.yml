@@ -1,0 +1,45 @@
+name: brew test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Tap this checkout as mk24x7/tap
+        run: |
+          taps="$(brew --repository)/Library/Taps/mk24x7"
+          mkdir -p "$taps"
+          rm -rf "$taps/homebrew-tap"
+          ln -s "$GITHUB_WORKSPACE" "$taps/homebrew-tap"
+          brew tap
+
+      - name: brew style
+        run: brew style Formula/prune.rb Formula/prune-cli.rb Casks/prune-app.rb
+
+      - name: brew audit (offline)
+        run: |
+          brew audit --strict --formula mk24x7/tap/prune mk24x7/tap/prune-cli
+          brew audit --strict --cask mk24x7/tap/prune-app
+
+      - name: brew audit --online
+        # The formulae and cask carry placeholder sha256 values until the first
+        # prune release (v4.0.0) exists, so the online audit cannot pass yet.
+        # Remove continue-on-error after scripts/bump.sh has run for v4.0.0.
+        continue-on-error: true
+        run: |
+          brew audit --strict --online --formula mk24x7/tap/prune mk24x7/tap/prune-cli
+          brew audit --strict --online --cask mk24x7/tap/prune-app
+
+      - name: shellcheck
+        run: |
+          brew install shellcheck
+          shellcheck scripts/*.sh
