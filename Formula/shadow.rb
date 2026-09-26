@@ -2,7 +2,7 @@ class Shadow < Formula
   desc "Explain which node, python and java run in each shell, and why"
   homepage "https://github.com/mk24x7/shadow"
   url "https://github.com/mk24x7/shadow/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "33d53919ea50409d97e2e8c4cb30d089ab8daac57482309e196e0f3e37e71dfc"
   license "MIT"
   head "https://github.com/mk24x7/shadow.git", branch: "main"
 

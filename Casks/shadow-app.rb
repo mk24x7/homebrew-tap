@@ -1,6 +1,6 @@
 cask "shadow-app" do
   version "1.0.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "5a82d04b28343ccf7d401afca8a2fbcf51c2c6b9d1e18a382d9570109b875c61"
 
   url "https://github.com/mk24x7/shadow/releases/download/v#{version}/Shadow-#{version}-macos-universal.dmg"
   name "Shadow"
